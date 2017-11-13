@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Sporastastic Akaila</title>
+  <style>
+    body, html {
+    height: 100%;
+}
+
+.parallax { 
+    /* The image used */
+    background-image: url("https://www.fotor.com/images2/features/backgrounds-new/Cute/Cute_03_A-small-map.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+.parallax2 { 
+    /* The image used */
+    background-image: url("https://media.discordapp.net/attachments/348299729626726401/353600275610730499/image.jpg?width=169&height=301");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+  .parallax3 { 
+    /* The image used */
+    background-image: url("https://i.pinimg.com/736x/3d/dd/53/3ddd53f8fddd1eb3cab2e99e47e3bd80--family-pics-my-family.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+    .parallax4 { 
+    /* The image used */
+    background-image: url("https://s-media-cache-ak0.pinimg.com/originals/fe/6d/e2/fe6de2e7b3298eafc3e39e2adb1eb59f.png");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+    #title{
+      color: black;
+      top: 50%;
+      text-align: center;
+      padding: 30%;
+    }
+    #youtaite{
+      color:black;
+      text-align:center;
+      background-color: pink;
+      padding:5%;
+    }
+    #cosplay{
+      color:black;
+      text-align:center;
+      padding:5%;
+    }
+    #VA{
+      color:black;
+      text-align:center;
+      padding:5%;
+    }
+    #footer{
+      color:gray;
+      text-align:center;
+    }
+  </style>
+  </head>
+<body>
+  <div class="parallax">
+    <h1 id="title">Sporastastic Akaila</h1>
+  </div>
+  <div class="youtaite content">
+    <h2 id="youtaite">Youtaite</h2>
+    <p></p>
+  </div>
+  <div class="parallax2"></div>
+  <div class="cosplay content">
+    <h1 id="cosplay">Cosplayer</h1>
+    <p></p>   
+  </div>
+  <div class="parallax3"></div>
+  <div class="VA content">
+    <h1 id="VA">Voice Actor</h1>
+    <p></p>  
+  </div>
+  <div class="parallax4"></div>
+  <div class="Footer Content">
+    <p id="footer">Youtube Tumblr</p>
+    
+  </div>
+</body>
+</html>
