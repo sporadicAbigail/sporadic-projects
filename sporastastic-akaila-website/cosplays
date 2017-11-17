@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!--Akaila covers-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Sporastastic Akaila</title>
+  <style>
+    body, html {
+    height: 100%;
+    background-color: #f2e8f4;
+}
+
+ #navbar {
+   overflow: hidden;
+   background-color: #31315e;
+ }
+ #navbar a {
+   float: left;
+   display: block;
+   color: #dfe2db;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+   font-size: 17px;
+ }
+ #navbar a:hover {
+   background-color: #5e5e8f;
+   color: white;
+ }
+ #navbar a.active {
+   background-color: #a062d6;
+   color: black;
+ }
+    .sticky {
+   position: fixed;
+   top: 0;
+   width: 100%
+ }
+ .sticky + .content {
+   padding-top: 60px;
+ }
+.parallax-heading { 
+    /* The image used */
+    background-image: url("https://cdn.shopify.com/s/files/1/0969/2646/products/Abstract_Background_06.gif?v=1459663823");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+.parallax2 { 
+    /* The image used */
+    background-image: url("data:image/jpeg;base64,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");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    .content{
+      text-align:center;
+    }
+  .parallax3 { 
+    /* The image used */
+    background-image: url("https://static.wixstatic.com/media/11062b_d1a646e8c3d54d97bc4f11fea4de5f78f000.jpg/v1/fill/w_1024,h_600,al_c,q_85,usm_0.66_1.00_0.01/11062b_d1a646e8c3d54d97bc4f11fea4de5f78f000.webp");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+    .parallax4 { 
+    /* The image used */
+    background-image: url("https://avante.biz/wp-content/uploads/Wallpaper-Simple/Wallpaper-Simple-001.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+    #title{
+      color: white;
+      top: 50%;
+      text-align: center;
+      padding: 25%;
+    }
+    #youtaite{
+      color:white;
+      text-align:center;
+      font-size: 80px;
+      text-shadow:
+      3px -3px 0 #000,
+      3px -3px 0 #000,
+      -3px 3px 0 #000,
+      3px 3px 0 #000; 
+      padding: 25%;
+    }
+    #cosplay{
+      color:white;
+      text-align:center;
+      font-size: 80px;
+      text-shadow:
+      3px -3px 0 #000,
+      3px -3px 0 #000,
+      -3px 3px 0 #000,
+      3px 3px 0 #000; 
+      padding: 25%;
+    }
+    #VA{
+      color:white;
+      text-align:center;
+      font-size: 80px;
+      text-shadow:
+      3px -3px 0 #000,
+      3px -3px 0 #000,
+      -3px 3px 0 #000,
+      3px 3px 0 #000; 
+      padding: 25%;
+    }
+    #footer{
+      color:gray;
+      text-align:center;
+    }
+  </style>
+  </head>
+ <body onscroll="myFunction()">
+  <div class="parallax-heading">
+    <h1 id="title">Sporastastic Akaila</h1>
+  </div>
+  <div id="navbar">
+   <a href="https://sporadicabigail.github.io/sporadic-projects/sporastastic-akaila-website/home">Home</a>
+   <a href="https://sporadicabigail.github.io/sporadic-projects/sporastastic-akaila-website/covers">Covers</a>
+   <a href="https://sporadicabigail.github.io/sporadic-projects/sporastastic-akaila-website/cosplays">Cosplays</a>
+   <a class="active" href="https://sporadicabigail.github.io/sporadic-projects/sporastastic-akaila-website/va)">Voice Acting</a>
+   <a href="https://sporadicabigail.github.io/sporadic-projects/sporastastic-akaila-website/archive">Master/Archive</a>
+   <a href="https://sporadicabigail.github.io/sporadic-projects/sporastastic-akaila-website/social-media">Social Media</a>
+ </div>
+  <div class="parallax2">
+    <h2 id="youtaite">Chorus</h2>
+  </div>
+  <div class="content">
+    <h3> Finished </h3>
+    <p>LOL, I haven't finished any chorus songs yet.</p>  
+    <h3>Projects</h3>
+      <li>Galaxy Insanity - Fantasme Chorus Battle group</li>
+      <li>V-Stars - Vocaloid chorus group</li>
+      <li>Auravela - Vocaloid chorus group</li>
+  </div>
+  <div class="parallax3">
+    <h2 id="cosplay">Solo</h2>
+  </div>
+  <div class="content">
+    <h3>Most recent</h3>
+    <iframe width="420" height="315"
+      src="https://www.youtube.com/embed/e9mFlea7ilc">
+    </iframe>
+    <h3>Links to older covers</h3>
+    <li><a href="https://www.youtube.com/watch?v=QMfOCU4WPKE">It's Ladybug</a></li>
+    <li><a href="https://www.youtube.com/watch?v=JusaJjjND1w">Unravel</a></li>
+    <li><a href="https://www.youtube.com/watch?v=da_QzkYuMEU">Ikanaide</a></li>
+  </div>
+  <div class="parallax4">
+    <h2 id="VA">Duet</h2>
+  </div>
+   <div class="content">
+     <h3>Most recent</h3>
+     <iframe width="420" height="315"
+       src="https://www.youtube.com/embed/fF51zg40dSY">
+     </iframe>
+     <h3>Links to older covers</h3>
+     <li><a href="https://www.youtube.com/watch?v=0DlnQj2eMDA">Soul Sister</a></li>
+   </div>   
+  <div class="Footer Content">
+    <p id="footer">Youtube Tumblr</p>
+    
+  </div>
+   <script>
+ var navbar = document.getElementById("navbar");
+ var sticky = navbar.offsetTop;
+ function myFunction() {
+   if (window.pageYOffset >= sticky) {
+     navbar.classList.add("sticky")
+   } else {
+     navbar.classList.remove("sticky");
+   }
+ }
+ </script>
+</body>
+</html>
