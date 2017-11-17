@@ -7,11 +7,41 @@
   <style>
     body, html {
     height: 100%;
+    background-color: #f2e8f4;
 }
 
+ #navbar {
+   overflow: hidden;
+   background-color: #31315e;
+ }
+ #navbar a {
+   float: left;
+   display: block;
+   color: #dfe2db;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+   font-size: 17px;
+ }
+ #navbar a:hover {
+   background-color: #5e5e8f;
+   color: white;
+ }
+ #navbar a.active {
+   background-color: #a062d6;
+   color: black;
+ }
+    .sticky {
+   position: fixed;
+   top: 0;
+   width: 100%
+ }
+ .sticky + .content {
+   padding-top: 60px;
+ }
 .parallax { 
     /* The image used */
-    background-image: url("https://www.fotor.com/images2/features/backgrounds-new/Cute/Cute_03_A-small-map.jpg");
+    background-image: url("https://cdn.shopify.com/s/files/1/0969/2646/products/Abstract_Background_06.gif?v=1459663823");
 
     /* Full height */
     height: 100%; 
@@ -62,26 +92,27 @@
     background-size: cover;
 }
     #title{
-      color: black;
+      color: white;
       top: 50%;
       text-align: center;
-      padding: 30%;
+      padding: 25%;
+    }
+    #desc{
+      color:black;
+      background-color: #e0dff5;
+      text-align:center;
     }
     #youtaite{
       color:black;
       text-align:center;
-      background-color: pink;
-      padding:5%;
     }
     #cosplay{
       color:black;
       text-align:center;
-      padding:5%;
     }
     #VA{
       color:black;
       text-align:center;
-      padding:5%;
     }
     #footer{
       color:gray;
@@ -89,22 +120,35 @@
     }
   </style>
   </head>
-<body>
+ <body onscroll="myFunction()">
   <div class="parallax">
     <h1 id="title">Sporastastic Akaila</h1>
   </div>
+  <div id="navbar">
+   <a class="active" href="https://sporadicabigail.github.io/sporadic-projects/sporastastic-akaila-website/home">Home</a>
+   <a href="http://output.jsbin.com/lejidac">Covers</a>
+   <a href="https://pra-robotics.github.io/praRoboticsWebsite/theTeam">Cosplays</a>
+   <a href="javascript:void(0)">Voice Acting</a>
+   <a href="javascript:void(0)">Master/Archive</a>
+   <a href="javascript:void(0)">Social Media</a>
+ </div>
+   <div id="desc">
+     <h1> Welcome </h1>
+     <p> Spo-ras-tas-tic.</p> 
+     <p>I'm a cosplayer, youtaite, dancer, mixer, animator, and a voice actor.</p>
+   </div>
   <div class="youtaite content">
     <h2 id="youtaite">Youtaite</h2>
     <p></p>
   </div>
   <div class="parallax2"></div>
   <div class="cosplay content">
-    <h1 id="cosplay">Cosplayer</h1>
+    <h2 id="cosplay">Cosplayer</h2>
     <p></p>   
   </div>
   <div class="parallax3"></div>
   <div class="VA content">
-    <h1 id="VA">Voice Actor</h1>
+    <h2 id="VA">Voice Actor</h2>
     <p></p>  
   </div>
   <div class="parallax4"></div>
@@ -112,5 +156,16 @@
     <p id="footer">Youtube Tumblr</p>
     
   </div>
+   <script>
+ var navbar = document.getElementById("navbar");
+ var sticky = navbar.offsetTop;
+ function myFunction() {
+   if (window.pageYOffset >= sticky) {
+     navbar.classList.add("sticky")
+   } else {
+     navbar.classList.remove("sticky");
+   }
+ }
+ </script>
 </body>
 </html>
