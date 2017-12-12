@@ -69,6 +69,8 @@ public class ColourSensorTest extends LinearOpMode {
     private ArrayList<Double> blueValues;
     private ArrayList<Double> redValues;
     private ArrayList<Double> distanceValues;
+    
+    private ColorSensor adaSensor;
 
 public Double getSensor(ArrayList<Double> list){
                 ArrayList<Double> newList = new ArrayList<Double>(list);
@@ -87,6 +89,8 @@ public Double getSensor(ArrayList<Double> list){
         
         sensorDistance = hardwareMap.get(DistanceSensor.class, "color_sensor");
         
+        adaSensor = (ColorSensor)hardwareMap.get("adafruit_color_sensor");
+        
         //final double SCALE_FACTOR = 255;
         
         double distance = 0;
@@ -98,6 +102,7 @@ public Double getSensor(ArrayList<Double> list){
         double finRed = 0;
         double roomRed = 0;
         double roomBlue = 0;
+        double adaColorSensor = 0;
         blueValues = new ArrayList<>();
         redValues = new ArrayList<>();
         distanceValues = new ArrayList<>();
@@ -141,12 +146,14 @@ public Double getSensor(ArrayList<Double> list){
             difference = red - blue;
             alpha = sensorColor.alpha();
             
-            telemetry.addData("Blue", blue);
+            telemetry.addData("rgb", "Red: %.2f, green: %.2f, blue: %.2f", red, green, blue);
+            //telemetry.addData("Blue", blue);
             telemetry.addData("Array Red", finRed);
-            telemetry.addData("Red", red);
+            //telemetry.addData("Red", red);
             telemetry.addData("Difference", difference);
             //telemetry.addData("Green", green);
             //telemetry.addData("Alpha", alpha);
+            telemetry.addData("adafruit sensor red", adaSensor.red());
             
             telemetry.update();
             
@@ -167,6 +174,8 @@ public Double getSensor(ArrayList<Double> list){
              telemetry.addData("h", computedH);
              telemetry.addData("s", computedS);
              telemetry.addData("v", computedV);
+             
+            
         }
     }
 }
