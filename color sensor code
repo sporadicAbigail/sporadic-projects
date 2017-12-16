@@ -19,23 +19,23 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SO
 package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
-import java.util.ArrayList;
-import java.lang.reflect.Array;
+//import java.util.ArrayList;
+//import java.lang.reflect.Array;
 import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
 import java.util.Locale;
 import com.qualcomm.robotcore.hardware.DistanceSensor;
 import com.qualcomm.robotcore.hardware.ColorSensor;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 //import com.qualcomm.robotcore.hardware.Gyroscope;
-import com.qualcomm.robotcore.hardware.DistanceSensor;
-import com.qualcomm.robotcore.hardware.ColorSensor;
+//import com.qualcomm.robotcore.hardware.DistanceSensor;
+//import com.qualcomm.robotcore.hardware.ColorSensor;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -43,6 +43,8 @@ import java.util.Collections;
 import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
 
 import java.util.Locale;
+
+import com.qualcomm.hardware.lynx.commands.LynxDatagram;
 
 /**
  * This file contains an minimal example of a Linear "OpMode". An OpMode is a 'program' that runs in either
@@ -66,17 +68,19 @@ public class ColourSensorTest extends LinearOpMode {
 
     ColorSensor sensorColor;
     DistanceSensor sensorDistance;
-    private ArrayList<Double> blueValues;
-    private ArrayList<Double> redValues;
-    private ArrayList<Double> distanceValues;
+    //creates array lists
+    //private ArrayList<Double> blueValues;
+    //private ArrayList<Double> redValues;
+    //private ArrayList<Double> distanceValues;
     
     private ColorSensor adaSensor;
 
-public Double getSensor(ArrayList<Double> list){
+//code to create the array
+/* public Double getSensor(ArrayList<Double> list){
                 ArrayList<Double> newList = new ArrayList<Double>(list);
                 Collections.sort(newList);
                 return newList.get(SENSOR_VALUES_SIZE / 2);
-        }
+        } */
 
     @Override
     public void runOpMode() {
@@ -84,11 +88,12 @@ public Double getSensor(ArrayList<Double> list){
         
         //imu = hardwareMap.get(Gyroscope.class, "imu");
         
+        //hardware mapping
         //color_sensor represents the REV color and distance sensor
         sensorColor = hardwareMap.get(ColorSensor.class, "color_sensor");
         
         sensorDistance = hardwareMap.get(DistanceSensor.class, "color_sensor");
-        
+        //adaSensor is the adafruit sensor
         adaSensor = (ColorSensor)hardwareMap.get("adafruit_color_sensor");
         
         //final double SCALE_FACTOR = 255;
@@ -103,15 +108,15 @@ public Double getSensor(ArrayList<Double> list){
         double roomRed = 0;
         double roomBlue = 0;
         double adaColorSensor = 0;
-        blueValues = new ArrayList<>();
-        redValues = new ArrayList<>();
-        distanceValues = new ArrayList<>();
-        if(redValues.size() > SENSOR_VALUES_SIZE) {
+        //blueValues = new ArrayList<>();
+        //redValues = new ArrayList<>();
+        //distanceValues = new ArrayList<>();
+        /*if(redValues.size() > SENSOR_VALUES_SIZE) {
             redValues.remove(0);
             finRed = getSensor(redValues);
         }
         redValues.add(red);
-
+*/
         
         
         telemetry.addData("Status", "Initialized");
@@ -126,12 +131,14 @@ public Double getSensor(ArrayList<Double> list){
         while (opModeIsActive()) {
             telemetry.addData("Status", "Running");
 
+            //question as to why this code is repeated?
+            /*
             if(redValues.size() > SENSOR_VALUES_SIZE) {
                 redValues.remove(0);
                 finRed = getSensor(redValues);
             }
             redValues.add(red);
-            
+            */
             distance = sensorDistance.getDistance(DistanceUnit.CM);
             
             //telemetry.addData("Distance", distance);
@@ -157,6 +164,8 @@ public Double getSensor(ArrayList<Double> list){
             
             telemetry.update();
             
+            /*
+            //code to get HSV values
              double computedH = 0;
              double computedS = 0;
              double computedV = 0;
@@ -175,7 +184,7 @@ public Double getSensor(ArrayList<Double> list){
              telemetry.addData("s", computedS);
              telemetry.addData("v", computedV);
              
-            
+            */
         }
     }
 }
